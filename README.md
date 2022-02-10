@@ -19,7 +19,7 @@ gh repo clone brianwow/arduino-morse-code-led
 git clone https://github.com/brianwow/arduino-morse-code-led
 ```
 
-#### Install Dependencies
+#### Install the dependencies
 
 ```sh
 pacman -S avr-libc avr-gcc avrdude # Arch Linux
@@ -41,3 +41,7 @@ sudo chmod a+rw /dev/ttyACM0
 ```sh
 cargo run
 ```
+
+---
+
+This project was generated using [avr-hal-template](https://github.com/Rahix/avr-hal-template).
