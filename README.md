@@ -1,20 +1,42 @@
-# Procedure
+# arduino-morse-code-led
 
-## Install Dependencies
+A beginner _hello world_ project to run Rust on the Arduino Uno. This project uses an LED on pin 12.
+
+To use your own morse code, change the following line from `src/main.rs`:
+
+```rust
+const MORSE_CODE: &str = "...";
+```
+
+## Building the Source
+
+#### Clone this repo
 
 ```sh
-yay -S avr-gcc avr-libc avrdude
-cargo install cargo-generate
+# Using GitHub CLI
+gh repo clone brianwow/arduino-morse-code-led
+# Or, using git
+git clone https://github.com/brianwow/arduino-morse-code-led
+```
+
+#### Install Dependencies
+
+```sh
+pacman -S avr-libc avr-gcc avrdude # Arch Linux
+sudo apt install avr-libc gcc-avr avrdude # Ubuntu
+
 cargo install ravedude
 ```
 
-## Take Arduino ownership
+#### Take Arduino ownership
+
+Run this whenever you get a permission error while running the code:
 
 ```sh
 sudo chmod a+rw /dev/ttyACM0
 ```
 
-## Run
+#### Run
 
 ```sh
 cargo run
