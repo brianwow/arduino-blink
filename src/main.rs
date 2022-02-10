@@ -2,9 +2,10 @@
 #![no_main]
 
 use arduino_hal::{
-    hal::port::PB4,
+    hal::port::PB5,
     port::{mode, Pin},
 };
+use arduino_hal::hal::port::PB4;
 use panic_halt as _;
 
 // Morse Code Specification:
@@ -18,7 +19,7 @@ const MEDIUM_GAP: u16 = DURATION * 7 - INTER_GAP;
 
 const MORSE_CODE: &str = "-.. . . --.. / -. ..- - ...";
 
-fn run_morse_code(led: &mut Pin<mode::Output, PB4>) {
+fn run_morse_code(led: &mut Pin<mode::Output, PB5>) {
     MORSE_CODE.chars().for_each(|c| match c {
         '-' => {
             led.set_high();
@@ -51,7 +52,7 @@ fn main() -> ! {
     let dp = arduino_hal::Peripherals::take().unwrap();
     let pins = arduino_hal::pins!(dp);
 
-    let mut led = pins.d12.into_output();
+    let mut led = pins.d13.into_output();
 
     loop {
         run_morse_code(&mut led);
