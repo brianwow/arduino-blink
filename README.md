@@ -1,6 +1,6 @@
 # arduino-morse-code-led
 
-A beginner _hello world_ project to run Rust on the Arduino Uno. This project blinks the on board LED of the Arduino Uno.
+A beginner _hello world_ project to blink the on board LED of the Arduino Uno using the Rust programming language.
 
 To use your own morse code, change the following line from `src/main.rs`:
 
