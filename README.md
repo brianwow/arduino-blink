@@ -28,7 +28,7 @@ sudo apt install avr-libc gcc-avr avrdude # Ubuntu
 cargo install ravedude
 ```
 
-#### Take Arduino ownership
+#### Allow writing to Arduino
 
 Run this whenever you get a permission error while running the code:
 
